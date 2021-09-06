@@ -122,13 +122,27 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ManageProjectsController.cs" />
+    <Compile Include="Controllers\ManageProjectsEmpController.cs" />
+    <Compile Include="Controllers\ManageRoleController.cs" />
+    <Compile Include="Controllers\ProjectController.cs" />
+    <Compile Include="Controllers\RoleController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\EmployeeModel.cs" />
-    <Compile Include="Models\Project.cs" />
+    <Compile Include="Models\ManageProjectsEmpModel.cs" />
+    <Compile Include="Models\ManageProjectsModel.cs" />
+    <Compile Include="Models\ManageRoleModel.cs" />
+    <Compile Include="Models\ProjectsModel.cs" />
+    <Compile Include="Models\RoleModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\EmployeeServices.cs" />
+    <Compile Include="Service\ManageProjectsEmpServices.cs" />
+    <Compile Include="Service\ManageProjectsService.cs" />
+    <Compile Include="Service\ManageRoleService.cs" />
+    <Compile Include="Service\ProjectsService.cs" />
+    <Compile Include="Service\RoleService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -166,12 +180,17 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Employee\List.cshtml" />
     <Content Include="Views\Employee\EditEmployee.cshtml" />
     <Content Include="Views\Employee\AddEmployee.cshtml" />
+    <Content Include="Views\Employee\List.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\ManageProjectsEmp\" />
+    <Folder Include="Views\ManageProjects\" />
+    <Folder Include="Views\ManageRole\" />
+    <Folder Include="Views\Project\" />
+    <Folder Include="Views\Role\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

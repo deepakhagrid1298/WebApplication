@@ -1,4 +1,4 @@
-﻿@Model IEnumerable<WebApplication7.Models.EmployeeModel>
+﻿@model IEnumerable<WebApplication7.Models.EmployeeModel>
 
 @{
     ViewBag.Title = "List";
@@ -11,6 +11,9 @@
 </p>
 <table class="table">
     <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Id)
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.FirstName)
         </th>
@@ -30,27 +33,31 @@
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.FirstName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LastName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DOB)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Contact)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.RoleId)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "EditEmployee", new { id=item.Id }) | |
-            @Html.ActionLink("Delete", "DeleteEmployee", new { id=item.Id })
-        </td>
-    </tr>
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Id)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.FirstName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.LastName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.DOB)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Contact)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.RoleId)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+        @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+    </td>
+</tr>
 }
 
 </table>
